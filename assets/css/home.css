@@ -112,7 +112,7 @@ body{
  
 
 
-#delete{
+#delete-button{
     background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
     border: none;
 }

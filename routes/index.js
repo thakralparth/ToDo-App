@@ -7,4 +7,6 @@ router.get('/',homeController.home);
 
 router.post('/create-todo',homeController.create);
 
+router.post('/destroy', homeController.destroy);
+
 module.exports=router;

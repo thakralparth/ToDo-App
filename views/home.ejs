@@ -3,7 +3,7 @@
         <title>
             <%= title %>
         </title>
-        <script src="https://kit.fontawesome.com/b5bcbd91c1.js" crossorigin="anonymous"></script>
+        
 
         <link rel="stylesheet" href="/css/home.css">
         
@@ -39,7 +39,7 @@
 
                     <div class="buttons-container form-border">
                         <button id="submit" type="submit"><i class="fas fa-plus"></i>  Add Task</button>
-                        <button id="delete"><i class="fas fa-trash-alt"></i>  Delete Tasks</button>
+                        <button id="delete-button"><i class="fas fa-trash-alt"></i>  Delete Tasks</button>
 
                     </div>
                 
@@ -50,12 +50,12 @@
                 <ul>
                     <% for(let i of todo_list){ %>
                         <li class="single-task form-border">
-                            <input type="checkbox" name="" value="">
+                            <input type="checkbox" name="checkbox-name" id="<%= i._id %>" >
                             <div class='single-task-70'>
                                 <div class='single-desc'>
                                     <%= i.description %>
                                 </div>
-                                <div>
+                                <div class='single-date'>
                                     <i class="far fa-calendar-alt"></i>
                                     <%= i.date.toDateString() %>
                                 </div>
@@ -72,6 +72,9 @@
             </div>
 
         </main>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="/jss/home.js"></script>
+        <script src="https://kit.fontawesome.com/b5bcbd91c1.js" crossorigin="anonymous"></script>
     </body>
 </html>

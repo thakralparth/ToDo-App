@@ -34,5 +34,20 @@ module.exports.create=function(req,res){
         return res.redirect('back');
     });
     }
-    
 
+
+    // controller to destroy TODO
+
+module.exports.destroy = function(req, res){
+    var items=[];
+    for(var key in req.body){
+        items=req.body[key];
+    }
+    Todo.remove({_id:{$in:items}},function(err, data){
+        if (err){
+           throw err;
+        }
+        res.json(data);
+    });
+}
+    
