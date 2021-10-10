@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/b5bcbd91c1.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/css/home.css">
+        
+    </head>
+    <body>
+        <h1 class="title"> <%= title %></h1>
+        <main class="main-container">
+            <form action="/create-todo" method="POST">
+                <div class="desc-container form-border">
+                    <label for="description">Description</label><br>
+                    <input type="text" id="description" name="description" placeholder="What do you need to do?" >
+                </div>
+                
+                <div class="cat-date-container form-border">
+                    <div class="category">
+                        <label for="category">Category</label>
+                            <select name="category" id="category">
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    
+                    <div class="due-date">
+                        <label for="due-date">DUE DATE</label>
+                        <input type="date" id="due-date" name="date">
+                    </div>
+                    
+                </div>
+                
+
+                    <div class="buttons-container form-border">
+                        <button id="submit" type="submit"><i class="fas fa-plus"></i>  Add Task</button>
+                        <button id="delete"><i class="fas fa-trash-alt"></i>  Delete Tasks</button>
+
+                    </div>
+                
+                
+            </form>
+
+            <div class="tasks-container">
+                <ul>
+                    <% for(let i of todo_list){ %>
+                        <li class="single-task form-border">
+                            <input type="checkbox" name="" value="">
+                            <div class='single-task-70'>
+                                <div class='single-desc'>
+                                    <%= i.description %>
+                                </div>
+                                <div>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <%= i.date.toDateString() %>
+                                </div>
+                                
+                            </div>
+                            <div class='single-task-30'>
+                                <%= i.category %>
+                            </div>
+                            
+                            
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+
+        </main>
+
+    </body>
+</html>

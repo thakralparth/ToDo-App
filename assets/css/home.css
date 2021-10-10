@@ -1,0 +1,147 @@
+body{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1032%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M18 800L818 0L1082 0L282 800z' fill='url(%23SvgjsLinearGradient1033)'%3e%3c/path%3e%3cpath d='M535.2 800L1335.2 0L2001.2 0L1201.2 800z' fill='url(%23SvgjsLinearGradient1033)'%3e%3c/path%3e%3cpath d='M1349 800L549 0L298.5 0L1098.5 800z' fill='url(%23SvgjsLinearGradient1034)'%3e%3c/path%3e%3cpath d='M946.8 800L146.79999999999995 0L-409.70000000000005 0L390.29999999999995 800z' fill='url(%23SvgjsLinearGradient1034)'%3e%3c/path%3e%3cpath d='M715.2380308956181 800L1440 75.23803089561807L1440 800z' fill='url(%23SvgjsLinearGradient1033)'%3e%3c/path%3e%3cpath d='M0 800L724.7619691043819 800L 0 75.23803089561807z' fill='url(%23SvgjsLinearGradient1034)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1032'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1033'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1034'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    /* text-align: center; */
+}
+
+.title{
+    text-align:center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container{
+    border:1px solid white;
+    width:60vw;
+    position: relative;
+    left: 20%;
+}
+
+.form-border{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+
+.desc-container{
+    height:12%;
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+    /* justify-content:start; */
+    /* border:1px solid red; */
+    /* align-items: center; */
+}
+
+.desc-container label{
+    color:white;
+    font-size: larger;
+    font-family: sans-serif;
+}
+.desc-container input{
+    height:30px;
+    margin-top: -10px;
+    background: inherit;
+    border: none;
+    color: white;
+    /* border-bottom: 1px solid lightskyblue; */
+    /* background:lightsalmon; */
+}
+
+
+.cat-date-container{
+    height: 12%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    color: white;
+    font-family: sans-serif;
+}
+
+.category{
+    width:48%;
+    border-right: 1px solid white;
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+    
+}
+
+.category select{
+    margin-top: 5px;
+    background: inherit;
+    color:skyblue;
+    border: none;
+}
+
+.due-date{
+    width:48%;
+    border-left: 1px solid white;
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.due-date input{
+    margin-top: 5px;
+    background: inherit;
+    color:skyblue;
+    border: none;
+}
+
+.buttons-container{
+    height:12%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons-container button{
+    height:30px;
+    width: 120px;
+}
+
+
+
+
+#submit{
+    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+    border:none;
+}
+
+ 
+
+
+#delete{
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    border: none;
+}
+
+
+.single-task{
+    height:12%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: -35px;
+    color:white;
+    align-items: center;
+}
+.single-task>input{
+    margin-right: 10px;
+}
+.single-desc{
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+.single-task-70{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.single-task-30{
+    width:30%;
+}
