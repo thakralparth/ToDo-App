@@ -1,6 +1,7 @@
 const Todo = require("../models/todoList");
 // const todo = require("../models/todoList");
 
+// controller to render home page
 module.exports.home=function(req,res){
     // res.end('Hello World!!');
     Todo.find({},function(err,todos){
@@ -16,7 +17,7 @@ module.exports.home=function(req,res){
 }
 
 
-
+// controller to create TODO 
 module.exports.create=function(req,res){
     // console.log(req.body());
     // console.log(Todo);
@@ -43,11 +44,14 @@ module.exports.destroy = function(req, res){
     for(var key in req.body){
         items=req.body[key];
     }
-    Todo.remove({_id:{$in:items}},function(err, data){
+    Todo.deleteMany({_id:{$in:items}},function(err, data){
         if (err){
            throw err;
         }
-        res.json(data);
+        // return res.json(data);
+        return res.redirect('back');
     });
 }
+
+
     

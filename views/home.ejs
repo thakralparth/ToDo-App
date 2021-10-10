@@ -11,7 +11,7 @@
     <body>
         <h1 class="title"> <%= title %></h1>
         <main class="main-container">
-            <form action="/create-todo" method="POST">
+            <form action="/create-todo" method="POST" class="block-border">
                 <div class="desc-container form-border">
                     <label for="description">Description</label><br>
                     <input type="text" id="description" name="description" placeholder="What do you need to do?" >
@@ -21,11 +21,12 @@
                     <div class="category">
                         <label for="category">Category</label>
                             <select name="category" id="category">
-                            <option value="personal">Personal</option>
-                            <option value="work">Work</option>
-                            <option value="school">School</option>
-                            <option value="cleaning">Cleaning</option>
-                            <option value="others">Others</option>
+                            <option value="1" selected disabled> Choose a Category </option>
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="School">School</option>
+                            <option value="Cleaning">Cleaning</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
                     
@@ -62,7 +63,7 @@
                                 
                             </div>
                             <div class='single-task-30'>
-                                <%= i.category %>
+                                <span><%= i.category %></span>
                             </div>
                             
                             
